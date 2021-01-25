@@ -8,11 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="数组模拟栈操作源代码Stack类123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051public class Stack &amp;#123;    String type &#x3D; &quot;Integer&quot;;    Object[] stack &amp;#x3">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/01/25/%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E6%A0%88%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数组模拟栈操作源代码Stack类123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051public class Stack &amp;#123;    String type &#x3D; &quot;Integer&quot;;    Object[] stack &amp;#x3">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-25T08:17:21.226Z">
+<meta property="article:modified_time" content="2021-01-25T08:21:08.775Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,159 +154,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-数组压缩（稀疏数组）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数组压缩（稀疏数组）"><a href="#数组压缩（稀疏数组）" class="headerlink" title="数组压缩（稀疏数组）"></a>数组压缩（稀疏数组）</h1><h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><h4 id="OriArriay类（创建原数组）"><a href="#OriArriay类（创建原数组）" class="headerlink" title="OriArriay类（创建原数组）"></a>OriArriay类（创建原数组）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class OriArray &#123;</span><br><span class="line">    int line;</span><br><span class="line">    int col;</span><br><span class="line">    int[][] array;</span><br><span class="line">    Scanner scan &#x3D; new Scanner(System.in);</span><br><span class="line">    public void create()&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        System.out.print(&quot;请输入您需要的行数：&quot;);</span><br><span class="line">        this.line &#x3D; scan.nextInt();</span><br><span class="line">        System.out.print(&quot;请输入您需要的列数：&quot;);</span><br><span class="line">        this.col &#x3D; scan.nextInt();</span><br><span class="line">        array &#x3D; new int[line][col];</span><br><span class="line">        System.out.print(&quot;现在请您输入一个&quot;+line+&quot;行&quot;+col+&quot;列的数组：&quot;);</span><br><span class="line">        for(i&#x3D;0;i&lt;line;i++)</span><br><span class="line">            for(j&#x3D;0;j&lt;col;j++)</span><br><span class="line">                array[i][j] &#x3D; scan.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    public void prin()&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        System.out.println(&quot;----------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;原数组为：&quot;);</span><br><span class="line">        for(i&#x3D;0;i&lt;line;i++) &#123;</span><br><span class="line">            for (j &#x3D; 0; j &lt; col; j++)</span><br><span class="line">                System.out.print(array[i][j] + &quot;  &quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Statistics类（稀疏数组）"><a href="#Statistics类（稀疏数组）" class="headerlink" title="Statistics类（稀疏数组）"></a>Statistics类（稀疏数组）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Statistics &#123;</span><br><span class="line">    int line;</span><br><span class="line">    int col&#x3D;3;</span><br><span class="line">    int[][] array;</span><br><span class="line">    public Statistics(OriArray ori)&#123;</span><br><span class="line">        int li&#x3D;1;</span><br><span class="line">        int i,j,num&#x3D;0;</span><br><span class="line">        for(i&#x3D;0;i&lt;ori.line;i++)</span><br><span class="line">            for(j&#x3D;0;j&lt;ori.col;j++)</span><br><span class="line">                if(ori.array[i][j]!&#x3D;0)</span><br><span class="line">                    num++;</span><br><span class="line">       this.array &#x3D; new int[num+1][col];</span><br><span class="line">       this.line&#x3D;num+1;</span><br><span class="line">       this.array[0][0]&#x3D;ori.line;</span><br><span class="line">       this.array[0][1]&#x3D;ori.col;</span><br><span class="line">        for(i&#x3D;0;i&lt;ori.line;i++)</span><br><span class="line">            for(j&#x3D;0;j&lt;ori.col;j++)</span><br><span class="line">                if(ori.array[i][j]!&#x3D;0)&#123;</span><br><span class="line">                    this.array[li][0]&#x3D;i;</span><br><span class="line">                    this.array[li][1]&#x3D;j;</span><br><span class="line">                    this.array[li][2]&#x3D;ori.array[i][j];</span><br><span class="line">                    li++;</span><br><span class="line">                &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public void prin()&#123;</span><br><span class="line">        int i,j;</span><br><span class="line">        System.out.println(&quot;----------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;压缩数组为：&quot;);</span><br><span class="line">        System.out.println(this.array[0][0]+&quot; &quot;+this.array[0][1]);</span><br><span class="line">        for(i&#x3D;1;i&lt;this.line;i++) &#123;</span><br><span class="line">            for (j &#x3D; 0; j &lt; this.col; j++)</span><br><span class="line">                System.out.print(this.array[i][j]+&quot; &quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="CompressTest类（测试类）"><a href="#CompressTest类（测试类）" class="headerlink" title="CompressTest类（测试类）"></a>CompressTest类（测试类）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class CompressTest &#123;</span><br><span class="line">    public static void main(String[] stds) &#123;</span><br><span class="line">        OriArray origin &#x3D; new OriArray();</span><br><span class="line">        origin.create();</span><br><span class="line">        Statistics compress &#x3D; new Statistics(origin);</span><br><span class="line">        origin.prin();</span><br><span class="line">        compress.prin();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/25/%E6%95%B0%E7%BB%84%E5%8E%8B%E7%BC%A9%EF%BC%88%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-基本运算" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h1><h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><h4 id="Sort类（实现三种常用排序）"><a href="#Sort类（实现三种常用排序）" class="headerlink" title="Sort类（实现三种常用排序）"></a>Sort类（实现三种常用排序）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">public class Sort &#123;</span><br><span class="line">    int tol &#x3D; 10;</span><br><span class="line">    &#x2F;&#x2F;选择排序</span><br><span class="line">    public void chooseSort(int[] numbers)&#123;</span><br><span class="line">        int i,j,num,change;</span><br><span class="line">        for(i&#x3D;0;i&lt;tol-1;i++)&#123;</span><br><span class="line">            num&#x3D;i;</span><br><span class="line">            for(j&#x3D;i+1;j&lt;tol;j++)&#123;</span><br><span class="line">                if(numbers[j]&lt;numbers[num])</span><br><span class="line">                    num &#x3D; j;</span><br><span class="line">            &#125;</span><br><span class="line">            if(num !&#x3D; i)&#123;</span><br><span class="line">                change&#x3D;numbers[i];</span><br><span class="line">                numbers[i]&#x3D;numbers[num];</span><br><span class="line">                numbers[num]&#x3D;change;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;插入排序</span><br><span class="line">    public void insertSort(int[] numbers)&#123;</span><br><span class="line">        int i,j,record;</span><br><span class="line">        for(i&#x3D;1;i&lt;tol;i++)&#123;</span><br><span class="line">            record &#x3D; numbers[i];</span><br><span class="line">            for(j&#x3D;i-1;j&gt;&#x3D;0 &amp;&amp; record&lt;numbers[j];j--)</span><br><span class="line">                numbers[j+1]&#x3D;numbers[j];</span><br><span class="line">            numbers[j+1]&#x3D;record;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;冒泡排序</span><br><span class="line">    public void bubbleSort(int[] numbers)&#123;</span><br><span class="line">        int i,j,change;</span><br><span class="line">        for(i&#x3D;0;i&lt;tol-1;i++)</span><br><span class="line">            for(j&#x3D;0;j&lt;tol-i-1;j++)&#123;</span><br><span class="line">                if(numbers[j+1]&lt;numbers[j])&#123;</span><br><span class="line">                    change&#x3D;numbers[j];</span><br><span class="line">                    numbers[j]&#x3D;numbers[j+1];</span><br><span class="line">                    numbers[j+1]&#x3D;change;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="PrimeNumber类（输出素数）"><a href="#PrimeNumber类（输出素数）" class="headerlink" title="PrimeNumber类（输出素数）"></a>PrimeNumber类（输出素数）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class PrimeNumber &#123;</span><br><span class="line">    int num &#x3D; 100;</span><br><span class="line">    &#x2F;&#x2F;构造器创建对象时输出num以内的素数</span><br><span class="line">    public PrimeNumber()&#123;</span><br><span class="line">        int enter&#x3D;0,count,num &#x3D; 2;</span><br><span class="line">        for(;num&lt;&#x3D;this.num;num++) &#123;</span><br><span class="line">            for (count &#x3D; 2; count &lt; num &#x2F; 2; count++)</span><br><span class="line">                if (num%count&#x3D;&#x3D;0)</span><br><span class="line">                    break;</span><br><span class="line">            if(count &#x3D;&#x3D; num&#x2F;2) &#123;</span><br><span class="line">                System.out.print(num+&quot; &quot;);</span><br><span class="line">                enter++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Fibonacci类（输出斐波拉契数列）"><a href="#Fibonacci类（输出斐波拉契数列）" class="headerlink" title="Fibonacci类（输出斐波拉契数列）"></a>Fibonacci类（输出斐波拉契数列）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Fibonacci &#123;</span><br><span class="line">    int tol &#x3D; 100;</span><br><span class="line">    &#x2F;&#x2F;构造器创建对象时输出tol个斐波拉契数列</span><br><span class="line">    public Fibonacci()&#123;</span><br><span class="line">        long  one&#x3D;1,two&#x3D;1,three&#x3D;one+two;</span><br><span class="line">        System.out.print(one+&quot;  &quot;+two);</span><br><span class="line">        for(int i&#x3D;2;i&lt;this.tol;i++)&#123;</span><br><span class="line">            System.out.print(&quot;  &quot;+three);</span><br><span class="line">            one&#x3D;two;</span><br><span class="line">            two&#x3D;three;</span><br><span class="line">            three&#x3D;one+two;</span><br><span class="line">            if(i%20&#x3D;&#x3D;0)</span><br><span class="line">                System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="BasicTest类（测试类）"><a href="#BasicTest类（测试类）" class="headerlink" title="BasicTest类（测试类）"></a>BasicTest类（测试类）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">public class BasicTest &#123;</span><br><span class="line">    public static void main(String[] stds) &#123;</span><br><span class="line">        &#x2F;&#x2F;以下是测试选择排序</span><br><span class="line">        int i;</span><br><span class="line">        int[] numbers1 &#x3D; new int[]&#123;45,56,12,45,78,89,25,23,65,45&#125;;</span><br><span class="line">        Sort sort &#x3D; new Sort();</span><br><span class="line">        sort.chooseSort(numbers1);</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;选择排序后：&quot;);</span><br><span class="line">        for(i&#x3D;0;i&lt;10;i++)&#123;</span><br><span class="line">            System.out.print(numbers1[i]+&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;以下是测试插入排序</span><br><span class="line">        int[] numbers2 &#x3D; new int[]&#123;45,56,12,45,78,89,25,23,65,45&#125;;</span><br><span class="line">        sort.insertSort(numbers2);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;插入排序后：&quot;);</span><br><span class="line">        for(i&#x3D;0;i&lt;10;i++)&#123;</span><br><span class="line">            System.out.print(numbers2[i]+&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;以下是测试冒泡排序</span><br><span class="line">        int[] numbers3 &#x3D; new int[]&#123;45,56,12,45,78,89,25,23,65,45&#125;;</span><br><span class="line">        sort.bubbleSort(numbers3);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;冒泡排序后：&quot;);</span><br><span class="line">        for(i&#x3D;0;i&lt;10;i++)&#123;</span><br><span class="line">            System.out.print(numbers3[i]+&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;以下是测试100以内的素数</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;100以内的素数：&quot;);</span><br><span class="line">        PrimeNumber Prime &#x3D; new PrimeNumber();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;以下是测试100个斐波拉契数（到后面太大了，，long都装不下）</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;100个斐波拉契数：&quot;);</span><br><span class="line">        Fibonacci fibonacci &#x3D; new Fibonacci();</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;-------------------------&quot;);</span><br><span class="line">        System.out.println(&quot;程序结束&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/25/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-多态与SOL数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="多态与SOL数据库"><a href="#多态与SOL数据库" class="headerlink" title="多态与SOL数据库"></a>多态与SOL数据库</h1><h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><h4 id="Driver类"><a href="#Driver类" class="headerlink" title="Driver类"></a>Driver类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Driver &#123;</span><br><span class="line">    public void add(String SQl)&#123;&#125;</span><br><span class="line">    public void query(String SQl)&#123;&#125;</span><br><span class="line">    public void update(String SQl)&#123;&#125;</span><br><span class="line">    public void delete(String SQl)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="MySQL类"><a href="#MySQL类" class="headerlink" title="MySQL类"></a>MySQL类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class MySQL extends Driver &#123;</span><br><span class="line">    public void add(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[MySQL] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void query(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[MySQL] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void update(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[MySQL] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void delete(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[MySQL] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Oracle类"><a href="#Oracle类" class="headerlink" title="Oracle类"></a>Oracle类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Oracle extends Driver &#123;</span><br><span class="line">    public void add(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[Oracle] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void query(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[Oracle] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void update(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[Oracle] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void delete(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[Oracle] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="DB2类"><a href="#DB2类" class="headerlink" title="DB2类"></a>DB2类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class DB2 extends Driver &#123;</span><br><span class="line">    public void add(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[DB2] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void query(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[DB2] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void update(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[DB2] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">    public void delete(String SQl)&#123;</span><br><span class="line">        System.out.println(&quot;[DB2] - &quot;+SQl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="SQLDriver类（充当测试类）"><a href="#SQLDriver类（充当测试类）" class="headerlink" title="SQLDriver类（充当测试类）"></a>SQLDriver类（充当测试类）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">public class SQLDriver &#123;</span><br><span class="line">    public static void main(String[] stds)&#123;</span><br><span class="line">        &#x2F;&#x2F; Driver driver &#x3D; SQLDriver.getConnection(&quot;MySQL&quot;);</span><br><span class="line">       &#x2F;&#x2F; Driver driver &#x3D; SQLDriver.getConnection(&quot;Oracle&quot;);</span><br><span class="line">        Driver driver &#x3D; SQLDriver.getConnection(&quot;DB2&quot;);</span><br><span class="line"></span><br><span class="line">        driver.add(&quot;INSERT INTO USER(username,age) VALUES(&#39;Cin&#39;,12)&quot;);</span><br><span class="line"></span><br><span class="line">        driver.query(&quot;SELECT * FROM USER WHERE user_name &#x3D; &#39;Cin&#39;&quot;);</span><br><span class="line"></span><br><span class="line">        driver.update(&quot;UPDATE USER SET age &#x3D; 20 WHERE user_name &#x3D; &#39;Cin&#39;&quot;);</span><br><span class="line"></span><br><span class="line">        driver.delete(&quot;DELETE FROM USER WHERE user_name &#x3D; &#39;Cin&#39;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static Driver getConnection(String name)&#123;</span><br><span class="line">        if(name.equals(&quot;MySQL&quot;))&#123;</span><br><span class="line">            Driver temporary &#x3D; new MySQL();</span><br><span class="line">            return temporary;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(name.equals(&quot;Oracle&quot;))&#123;</span><br><span class="line">            Driver temporary &#x3D; new Oracle();</span><br><span class="line">            return temporary;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(name.equals(&quot;DB2&quot;))&#123;</span><br><span class="line">            Driver temporary &#x3D; new DB2();</span><br><span class="line">            return temporary;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            System.out.println(&quot;没有此数据库&quot;);</span><br><span class="line">            Driver temporary &#x3D; new Driver();</span><br><span class="line">            return temporary;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/25/%E5%A4%9A%E6%80%81%E4%B8%8ESOL%E6%95%B0%E6%8D%AE%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数组模拟栈操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数组模拟栈操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -314,6 +166,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -321,16 +194,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/25/%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E6%A0%88%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/25/%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E6%A0%88%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/01/25/%E5%A4%9A%E6%80%81%E4%B8%8ESOL%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/25/java%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -350,207 +291,14 @@
 
 
 
-
   
-    <article id="post-java动态数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java动态数组"><a href="#Java动态数组" class="headerlink" title="Java动态数组"></a>Java动态数组</h1><h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class DynamicArray &#123;</span><br><span class="line">    int[] array &#x3D; new int[10];</span><br><span class="line">    int arraySize &#x3D; 10;</span><br><span class="line">    int total &#x3D; 0;</span><br><span class="line">    &#x2F;&#x2F; 添加（当已用元素和总容量的比值达到百分之七十，进行自动扩容,扩容量为10个元素单位）</span><br><span class="line">    void add(int value)&#123;</span><br><span class="line">        if(total&#x2F;(float)arraySize&gt;&#x3D;0.7)</span><br><span class="line">            this.dilatation();</span><br><span class="line">        array[total++]&#x3D;value;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 获取</span><br><span class="line">    int get(int index)&#123;</span><br><span class="line">        return array[index];</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 删除</span><br><span class="line">    int remove(int index)&#123;</span><br><span class="line">        int subscript &#x3D; index,value&#x3D;array[index];</span><br><span class="line">        for(;subscript&lt;total-1;subscript++)</span><br><span class="line">            array[subscript]&#x3D;array[subscript+1];</span><br><span class="line">        total--;</span><br><span class="line">        return value;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 修改</span><br><span class="line">    int set(int index, int value)&#123;</span><br><span class="line">        int usedValue &#x3D; array[index];</span><br><span class="line">        array[index] &#x3D; value;</span><br><span class="line">        return usedValue;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 是否包含某个值</span><br><span class="line">    boolean contain(int value)&#123;</span><br><span class="line">        int loop;</span><br><span class="line">        for(loop&#x3D;0;loop&lt;total;loop++)</span><br><span class="line">            if(array[loop]&#x3D;&#x3D;value)</span><br><span class="line">                return true;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 大小</span><br><span class="line">    int size()&#123;</span><br><span class="line">        return arraySize;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 反转（不修改原数组，把反转后的结果返回）</span><br><span class="line">    int[] reverse()&#123;</span><br><span class="line">        int loop;</span><br><span class="line">        int[] reArray &#x3D; new int[total];</span><br><span class="line">        for(loop&#x3D;0;loop&lt;total;loop++)</span><br><span class="line">            reArray[loop]&#x3D;array[total-1-loop];</span><br><span class="line">        return reArray;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 返回指定值首次出现的下标</span><br><span class="line">    int indexOf(int value)&#123;</span><br><span class="line">        int loop;</span><br><span class="line">        for(loop&#x3D;0;loop&lt;total;loop++)</span><br><span class="line">            if(array[loop]&#x3D;&#x3D;value)</span><br><span class="line">                return loop;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    void dilatation()&#123;</span><br><span class="line">        arraySize+&#x3D;10;</span><br><span class="line">        int loop;</span><br><span class="line">        int[] newArray &#x3D; new int[arraySize];</span><br><span class="line">        for(loop&#x3D;0;loop&lt;total;loop++)</span><br><span class="line">            newArray[loop]&#x3D;array[loop];</span><br><span class="line">        array &#x3D; newArray;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以自行构建测试类进行测试</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/25/java%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="title：hexo博客的搭建与写作"><a href="#title：hexo博客的搭建与写作" class="headerlink" title="title：hexo博客的搭建与写作"></a>title：hexo博客的搭建与写作</h1><hr>
-<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><h3 id="一、需要的软件"><a href="#一、需要的软件" class="headerlink" title="一、需要的软件"></a><em>一、需要的软件</em></h3><p>1.Windows Terminal<br>2.Git</p>
-<p>3.Node.js</p>
-<h3 id="二、步骤"><a href="#二、步骤" class="headerlink" title="二、步骤"></a><em>二、步骤</em></h3><h6 id="lt-一-gt-、准备工作"><a href="#lt-一-gt-、准备工作" class="headerlink" title="&lt;一&gt;、准备工作"></a>&lt;一&gt;、准备工作</h6><p>​    1.首先前期准备工作是要有一个GitHub账号，然后下载并安装Windows Terminal、Git、Node.js</p>
-<p>​                （WIndows Terminal在Windows系统自带的Microsoft store中就可以下载）</p>
-<p>​    2.安装完毕之后需要配置好环境变量。（系统属性窗口中高级系统设置打开对话框中有环境变量的配        置）</p>
-<p>​            &gt;首先是配置node.js的环境变量</p>
-<p>​                    —将下载时node文件夹存放的位置保存到环境变量中，方便系统直接查找</p>
-<p>​            &gt;配置npm仓库的环境变量</p>
-<p>​                    —打开windows terminal设置npm仓库的位置(命令为： npm config set prefix 自己需要的路                    径)，配置好后可以                    继续用npm config list查看配置，然后再配置它的环境变量（配置环境变量                    的方法同上）</p>
-<p>​            &gt;以上两者都配置成功后，在windows terminal中用node –version和npm –version可以分别查看                  到node和npm仓库                的版本</p>
-<p>​    3.最后在windows terminal中执行npm install hexo-cli -g下载好hexo必要的程序插件</p>
-<h6 id="lt-二-gt-、正式搭建"><a href="#lt-二-gt-、正式搭建" class="headerlink" title="&lt;二&gt;、正式搭建"></a>&lt;二&gt;、正式搭建</h6><p>​    主要步骤跟随连接视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=trigger_reload">https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=trigger_reload</a></p>
-<p>​    但因为连接中是用IOS系统搭建的，所以与WIndows系统搭建方式有些许不同，这里做出提出</p>
-<p>​        1、win10中查看当前目录下文件与文件夹的命令是dir</p>
-<p>​        2.IOS系统中是使用“vim 博文名称”的形式来修改博文的，windows下我们用笔记本修改，命令是</p>
-<p>​            ”notepad 博文名称“</p>
-<p>​        3、对_config.yml文件进行配置时，win10的更改方式为：</p>
-<p>​                    type: ‘git’</p>
-<p>​                    repo: 仓库地址</p>
-<p>​                    branch: master</p>
-<p>​        4、_config.yml文件修改后不能直接hexo d</p>
-<p>​                    要先输入命令git config –global user.email “xxx@xxx”（你的邮箱）</p>
-<p>​                    否则会报错提示where are you</p>
-<p>​                    然后win10中是会弹出GitHub对话框提示你输入账号和密码</p>
-<p>​    注：其他主要内容视频中的up主讲的很清楚，这里不再累述</p>
-<p>​        </p>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><h3 id="一、需要的软件-1"><a href="#一、需要的软件-1" class="headerlink" title="一、需要的软件"></a><em>一、需要的软件</em></h3><p>1.专业软件Typora</p>
-<p>2.也可以自己尝试其他软件，不同软件效果不一样。甚至可以用笔记本写，但是效果可想而知</p>
-<h3 id="二、步骤-1"><a href="#二、步骤-1" class="headerlink" title="二、步骤"></a><em>二、步骤</em></h3><p>​    直接打开博客source文件夹下的对应博客进行修改，然后按上面发布的步骤重新发布，就好了</p>
-<p><img src="/win10.jfif"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/15/hello-world/">hexo博客新建写作与发布</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/15/hello-world/" class="archive-article-date">
-  	<time datetime="2021-01-15T06:33:43.438Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -573,8 +321,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
