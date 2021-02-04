@@ -1,0 +1,75 @@
+body{
+    background-image:url("背景.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.time{
+    position: fixed;
+    font-size: 40px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    cursor: default;
+    color: white;
+}
+.time:hover {       /*悬停动作  放置变*/
+    font-size: 55px;
+}
+.dian input{
+    border-radius: 1cm;
+    position : fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    background-color:black;
+    color: white;
+    text-align: center;
+    outline: none;
+    width:350px;
+    height:45px;
+    
+}
+input::-webkit-input-placeholder{
+    font-size: 40px;
+}
+.dian input:focus{    /*元素动作  点击变*/
+    width: 500px;
+    height: 50px;
+    transition: 0.5s;
+}
+/*  .dian:hover{
+    width: 25cm;
+} */
+.buttonm{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+.buttonm input{
+    width: 4cm;
+    border: none;
+    background-color: black;
+    color: white;
+    height: 1cm;
+    border-radius: 1cm;
+    outline: none;
+    /* visibility: hidden; */
+}
+ div>input{
+    font-size: 50px;
+} 
+.textt{
+    position: absolute;   /* 文字方向排版可选 */
+    bottom: 50px;
+    width: 100%;
+    background: rgba(30,30,30,0.7);
+    height: 60px;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+    /* visibility: hidden; */
+    transition: 0.3s;
+}
